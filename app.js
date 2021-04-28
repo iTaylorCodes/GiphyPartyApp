@@ -23,7 +23,7 @@ async function addGif(e) {
 	e.preventDefault();
 
 	const response = await axios.get(
-		`http://api.giphy.com/v1/gifs/search?q=${$input.val()}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
+		`https://api.giphy.com/v1/gifs/search?q=${$input.val()}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
 	);
 	console.log(response);
 

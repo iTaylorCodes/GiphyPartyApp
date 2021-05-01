@@ -10,7 +10,9 @@ function createDiv(res) {
 	let allResults = res.data.length;
 	if (allResults) {
 		let randomIdx = Math.floor(Math.random() * allResults);
-		let $newDiv = $('<div>', { class: 'gif-div' });
+		let $newDiv = $('<div>', {
+			class: 'gif-div col-md-6 col-xl-4 text-center p-1'
+		});
 		let $gif = $('<img>', {
 			src: res.data[randomIdx].images.original.url,
 			class: 'gif-img'

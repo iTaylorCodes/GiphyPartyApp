@@ -31,8 +31,14 @@ async function addGif(e) {
 
 	createDiv(response.data);
 
+	// Updates the remove button badge if input is not empty
+	if (!$input.val()) {
+		return;
+	}
 	currentImageCount += 1;
 	$countbdge.text(currentImageCount);
+
+	// Empties the input
 	$input.val('');
 }
 

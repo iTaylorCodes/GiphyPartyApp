@@ -3,19 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Giphy Party!</title>
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css" />
 	</head>
 
 	<body>
-		<div id="container">
+		<div id="container" class="container">
 			<h1>Giphy Party!</h1>
 			<form id="search-form">
 				<input type="text" id="search" placeholder="Enter a search term" />
-				<input type="submit" id="submit-btn" value="Search Giphy" />
+				<input type="submit" id="submit-btn" class="btn btn-primary" value="Search Giphy" />
 			</form>
 
-			<button id="remove-btn">Remove Images</button>
+			<div class="container">
+				<button id="remove-btn" class="btn btn-outline-danger">
+					Remove Images
+					<span id="count-badge" class="badge-pill badge-warning">0</span>
+				</button>
+			</div>
 
-			<div id="giph-container"></div>
+			<div id="giph-container" class="col-sm-6 col-lg-3"></div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.js"></script>

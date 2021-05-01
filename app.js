@@ -1,5 +1,7 @@
 const $input = $('#search');
 const $gifContainer = $('#giph-container');
+const $countbdge = $('#count-badge');
+let currentImageCount = 0;
 
 $('form').on('submit', addGif);
 
@@ -29,10 +31,15 @@ async function addGif(e) {
 
 	createDiv(response.data);
 
+	currentImageCount += 1;
+	$countbdge.text(currentImageCount);
 	$input.val('');
 }
 
 // removes all images
 $('#remove-btn').on('click', function () {
 	$gifContainer.empty();
+
+	currentImageCount = 0;
+	$countbdge.text(currentImageCount);
 });
